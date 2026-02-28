@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+/* Basic setup */
+html { scroll-behavior: smooth; }
+body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+
+/* Variations */
+.bg-variation { background-color: #0a0a0a; border-bottom: 1px solid #111; }
+.bg-variation-bottom { background-color: #0a0a0a; border-top: 1px solid #111; }
+
+/* Header Elements */
+.contact-trigger { font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 0.5rem 1rem; transition: 0.3s; }
+.contact-trigger:hover { background: #fff; color: #000; }
+.social-icon { color: #444; transition: 0.3s; }
+.social-icon:hover { color: #fff; }
+
+/* Filter Buttons */
+.filter-btn { color: #444; transition: 0.3s; font-weight: 900; letter-spacing: 0.2em; font-size: 0.7rem; text-transform: uppercase; border-bottom: 2px solid transparent; padding-bottom: 4px; }
+.filter-btn.active { color: #fff; border-bottom: 2px solid #fff; }
+
+/* Projects */
+.project-image { width: 100%; height: 320px; object-fit: cover; border: 1px solid #1a1a1a; transition: 0.5s ease; }
+.project-card:hover .project-image { border-color: #555; transform: translateY(-8px); }
+.card-title { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.5rem; transition: 0.3s; }
+.project-card:hover .card-title { color: #999; }
+.card-desc { color: #666; font-size: 0.875rem; margin-bottom: 1.5rem; line-height: 1.6; }
+.card-link { font-size: 0.625rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; border-bottom: 1px solid #fff; padding-bottom: 2px; transition: 0.3s; }
+.project-card:hover .card-link { color: #666; border-color: #666; }
+
+/* Form & Contact */
+.section-label { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.5em; color: #333; font-weight: 900; margin-bottom: 4rem; font-style: italic; }
+.contact-heading { font-size: 3rem; font-weight: 900; letter-spacing: -0.05em; text-transform: uppercase; line-height: 1; margin-bottom: 1.5rem; }
+.email-link { font-weight: 700; text-decoration: underline; text-underline-offset: 8px; transition: 0.3s; }
+.email-link:hover { color: #999; }
+.form-input { background: transparent; border-bottom: 1px solid #222; padding: 0.75rem 0; font-size: 0.75rem; letter-spacing: 0.1em; outline: none; transition: 0.3s; text-transform: uppercase; }
+.form-input:focus { border-color: #fff; }
+.submit-btn { background: #fff; color: #000; font-weight: 900; text-transform: uppercase; font-size: 0.625rem; letter-spacing: 0.3em; padding: 1rem; margin-top: 1rem; transition: 0.3s; }
+.submit-btn:hover { background: #ccc; }
+
+.hidden { display: none; }

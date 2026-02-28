@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Aragón | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <meta property="og:title" content="Juan Aragón | Portfolio">
+    <meta property="og:description" content="Game Developer & 3D Artist based in Colombia.">
+    <meta property="og:image" content="assets/img/sumo.png">
+    <meta property="og:url" content="https://yourusername.github.io/">
+</head>
+
+<body class="antialiased">
+
+    <header class="bg-variation w-full">
+        <div class="max-w-5xl mx-auto pt-32 pb-20 px-10">
+            <h1 class="text-7xl font-black tracking-tighter mb-4 italic uppercase">Juan Aragón</h1>
+            <p class="text-gray-500 text-xl mb-8 max-w-2xl leading-relaxed">
+                Game Developer & 3D Artist. <span class="text-gray-300">Building stylized worlds from Colombia.</span>
+            </p>
+            <div class="flex items-center gap-8">
+                <a href="#contact" class="contact-trigger">Contact Me</a>
+                <a href="https://junsarae.artstation.com/" target="_blank" class="social-icon"><i
+                        data-lucide="palette"></i></a>
+                <a href="https://sajun0019.itch.io/" target="_blank" class="social-icon"><i
+                        data-lucide="gamepad-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-10 py-32">
+        <nav class="flex gap-10 mb-20">
+            <button onclick="filterSelection('all')" class="filter-btn active" id="btn-all">All Work</button>
+            <button onclick="filterSelection('gamedev')" class="filter-btn" id="btn-gamedev">Games</button>
+            <button onclick="filterSelection('art')" class="filter-btn" id="btn-art">3D Art</button>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24" id="projects-grid">
+            <a href="https://sajun0019.itch.io/generation-sumo" target="_blank"
+                class="project-card gamedev group block no-underline">
+                <img src="assets/img/sumo.png" alt="Sumo Game" class="project-image mb-8">
+                <h3 class="card-title">Sumo Physics Demo</h3>
+                <p class="card-desc">Unity prototype from Generation Colombia. Features custom AI and power-ups.</p>
+                <span class="card-link">Play Project →</span>
+            </a>
+
+            <a href="https://junsarae.artstation.com/" target="_blank"
+                class="project-card art group block no-underline">
+                <img src="assets/img/Scarab.png" alt="3D Art" class="project-image mb-8">
+                <h3 class="card-title">Stylized Environment</h3>
+                <p class="card-desc">Hand-painted assets focusing on stylized silhouettes. Full breakdown on ArtStation.
+                </p>
+                <span class="card-link">View on ArtStation →</span>
+            </a>
+        </div>
+    </main>
+
+    <section class="bg-variation-bottom w-full pt-32 pb-40" id="contact">
+        <div class="max-w-5xl mx-auto px-10">
+            <h2 class="section-label">03. Connect</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div>
+                    <h3 class="contact-heading">Let's build<br>something.</h3>
+                    <p class="text-gray-500 mb-10 max-w-sm leading-relaxed"> I'm currently open to new opportunities in
+                        Game Development or 3D Art.
+                        Whether you have a question or just want to connect, my inbox is always open.</p>
+                    <a href="mailto:juan.aragon.ps@gmail.com" class="email-link">juan.aragon.ps@gmail.com</a>
+                </div>
+                <form action="https://formspree.io/f/mnjbrown" method="POST" class="flex flex-col gap-6">
+                    <input type="text" name="name" placeholder="NAME" class="form-input" required>
+                    <input type="email" name="email" placeholder="EMAIL" class="form-input" required>
+                    <textarea name="message" placeholder="MESSAGE" rows="4" class="form-input resize-none"
+                        required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
