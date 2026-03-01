@@ -1,4 +1,3 @@
-// Initialize Lucide Icons
 lucide.createIcons();
 
 function filterSelection(category) {
@@ -25,3 +24,6 @@ function filterSelection(category) {
         }
     }
 }
+
+// THIS LINE MAKES GAMES SHOW FIRST AUTOMATICALLY
+filterSelection('gamedev');

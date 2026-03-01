@@ -21,38 +21,87 @@
             </p>
             <div class="flex items-center gap-8">
                 <a href="#contact" class="contact-trigger">Contact Me</a>
-                <a href="https://junsarae.artstation.com/" target="_blank" class="social-icon"><i
-                        data-lucide="palette"></i></a>
-                <a href="https://sajun0019.itch.io/" target="_blank" class="social-icon"><i
-                        data-lucide="gamepad-2"></i></a>
+                <a href="https://sajun0019.itch.io/" target="_blank" class="social-icon">
+                    <img src="assets/img/icons/itchdotio.svg" alt="Itch.io"
+                        class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
+                </a>
+
+                <a href="https://junsarae.artstation.com/" target="_blank" class="social-icon">
+                    <img src="assets/img/icons/artstation.svg" alt="ArtStation"
+                        class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
+                </a>
+
             </div>
         </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-10 py-32">
         <nav class="flex gap-10 mb-20">
-            <button onclick="filterSelection('all')" class="filter-btn active" id="btn-all">All Work</button>
-            <button onclick="filterSelection('gamedev')" class="filter-btn" id="btn-gamedev">Games</button>
-            <button onclick="filterSelection('art')" class="filter-btn" id="btn-art">3D Art</button>
+            <button onclick="filterSelection('gamedev')" class="filter-btn active uppercase"
+                id="btn-gamedev">Games</button>
+            <button onclick="filterSelection('art')" class="filter-btn uppercase" id="btn-art">3D Art</button>
+            <button onclick="filterSelection('all')" class="filter-btn uppercase" id="btn-all">All Work</button>
         </nav>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-24" id="projects-grid">
+
             <a href="https://sajun0019.itch.io/generation-sumo" target="_blank"
-                class="project-card gamedev group block no-underline">
-                <img src="assets/img/sumo.png" alt="Sumo Game" class="project-image mb-8">
-                <h3 class="card-title">Sumo Physics Demo</h3>
-                <p class="card-desc">Unity prototype from Generation Colombia. Features custom AI and power-ups.</p>
-                <span class="card-link">Play Project →</span>
+                class="project-card gamedev group block no-underline relative">
+                <div class="relative overflow-hidden mb-8">
+                    <img src="assets/img/sumo.png" alt="Sumo Game"
+                        class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                        <div class="flex flex-wrap gap-2 justify-center px-4">
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Unity</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">C#</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Physics</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Sumo Physics Demo
+                </h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Unity prototype from Generation Colombia. Features
+                    custom AI and power-ups.</p>
+                <span
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">Play
+                    Project →</span>
             </a>
 
             <a href="https://junsarae.artstation.com/" target="_blank"
-                class="project-card art group block no-underline">
-                <img src="assets/img/scarab.png" alt="3D Art" class="project-image mb-8">
-                <h3 class="card-title">Stylized Environment</h3>
-                <p class="card-desc">Hand-painted assets focusing on stylized silhouettes. Full breakdown on ArtStation.
-                </p>
-                <span class="card-link">View on ArtStation →</span>
+                class="project-card art group block no-underline relative">
+                <div class="relative overflow-hidden mb-8">
+                    <img src="assets/img/Scarab.png" alt="3D Art"
+                        class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                        <div class="flex flex-wrap gap-2 justify-center px-4">
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Blender</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">ZBrush</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Substance
+                                Painter</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Unreal
+                                Engine 5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Stylized Environment
+                </h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Hand-painted assets focusing on stylized
+                    silhouettes. Full breakdown on ArtStation.</p>
+                <span
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">View
+                    on ArtStation →</span>
             </a>
+
         </div>
     </main>
 
@@ -62,9 +111,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
                 <div>
                     <h3 class="contact-heading">Let's build<br>something.</h3>
-                    <p class="text-gray-500 mb-10 max-w-sm leading-relaxed"> I'm currently open to new opportunities in
-                        Game Development or 3D Art.
-                        Whether you have a question or just want to connect, my inbox is always open.</p>
+                    <p class="text-gray-500 mb-10 max-w-sm leading-relaxed"> I'm currently open to new opportunities
+                        in Game Development or 3D Art. Whether you have a question or just want to connect, my inbox is
+                        always open.</p>
                     <a href="mailto:juan.aragon.ps@gmail.com" class="email-link">juan.aragon.ps@gmail.com</a>
                 </div>
                 <form action="https://formspree.io/f/mnjbrown" method="POST" class="flex flex-col gap-6">
