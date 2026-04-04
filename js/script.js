@@ -27,3 +27,20 @@ function filterSelection(category) {
 
 // THIS LINE MAKES GAMES SHOW FIRST AUTOMATICALLY
 filterSelection('gamedev');
+// --- Language Toggle System ---
+const langToggleBtn = document.getElementById('lang-toggle');
+
+if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Toggle the 'es-active' class on the body
+        document.body.classList.toggle('es-active');
+        
+        // Change the button text depending on the active language
+        if (document.body.classList.contains('es-active')) {
+            langToggleBtn.innerText = 'EN'; // Show EN button when in Spanish
+        } else {
+            langToggleBtn.innerText = 'ES'; // Show ES button when in English
+        }
+    });
+}

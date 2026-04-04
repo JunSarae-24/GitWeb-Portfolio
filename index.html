@@ -12,51 +12,122 @@
 </head>
 
 <body class="antialiased">
+    <a href="#" id="lang-toggle"
+        class="fixed top-8 right-8 md:top-10 md:right-10 z-50 cv-trigger !bg-transparent border-gray-500 text-gray-500 hover:text-white hover:border-white backdrop-blur-sm">ES</a>
 
     <header class="bg-variation w-full">
         <div class="max-w-5xl mx-auto pt-32 pb-20 px-10">
-            <h1 class="text-7xl font-black tracking-tighter mb-4 italic uppercase">Juan Aragón</h1>
+            <h1 class="text-7xl font-black tracking-tighter mb-4 italic uppercase glitch-hover">Juan Aragón</h1>
             <p class="text-gray-500 mb-8 max-w-2xl leading-relaxed">
-                <strong class="text-white">Game Developer & 3D Artist.</strong>
-                <span class="block mt-2 text-gray-400">
-                    I bridge the gap between technical logic and visual storytelling, whether I am programming mechanics
+                <strong class="text-white lang-en">Game Developer & 3D Artist.</strong>
+                <span class="block mt-2 text-gray-400 lang-en">
+                    I bridge the gap between technical logic and visual storytelling, whether I am programming
+                    mechanics
                     in Unity, sculpting stylized environments, or leading interactive gamification projects.
                 </span>
+
+                <strong class="text-white lang-es">Desarrollador de Videojuegos y Artista 3D.</strong>
+                <span class="block mt-2 text-gray-400 lang-es">
+                    Cierro la brecha entre la lógica técnica y la narrativa visual, ya sea programando mecánicas
+                    en
+                    Unity, esculpiendo entornos estilizados o liderando proyectos interactivos de gamificación.
+                </span>
             </p>
-            <div class="flex items-center gap-8">
-                <a href="#contact" class="contact-trigger">Contact Me</a>
-                <a href="https://sajun0019.itch.io/" target="_blank" class="social-icon">
-                    <img src="assets/img/icons/itchdotio.svg" alt="Itch.io"
-                        class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
-                </a>
 
-                <a href="https://junsarae.artstation.com/" target="_blank" class="social-icon">
-                    <img src="assets/img/icons/artstation.svg" alt="ArtStation"
-                        class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
-                </a>
-                <a href="https://www.linkedin.com/in/juan-aragon-gameartist/" target="_blank" class="social-icon">
-                    <img src="assets/img/icons/linkedin.png" alt="Linkedin"
-                        class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
-                </a>
+            <div class="flex flex-wrap items-center gap-6 md:gap-8 mt-4">
+                <div class="flex gap-4">
+                    <a href="#contact" class="contact-trigger lang-en">Contact Me</a>
+                    <a href="#contact" class="contact-trigger lang-es">Contáctame</a>
 
+                    <a href="assets/Juan_Aragon_CV_EN.pdf" download class="cv-trigger lang-en">Download CV</a>
+                    <a href="assets/Juan_Aragon_CV_ES.pdf" download class="cv-trigger lang-es">Descargar CV</a>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="https://sajun0019.itch.io/" target="_blank" class="social-icon">
+                        <img src="assets/img/icons/itchdotio.svg" alt="Itch.io"
+                            class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
+                    </a>
+
+                    <a href="https://junsarae.artstation.com/" target="_blank" class="social-icon">
+                        <img src="assets/img/icons/artstation.svg" alt="ArtStation"
+                            class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/juan-aragon-gameartist/" target="_blank" class="social-icon">
+                        <img src="assets/img/icons/linkedin.png" alt="Linkedin"
+                            class="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition">
+                    </a>
+                </div>
             </div>
-        </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-10 py-32">
-        <nav class="flex gap-10 mb-20">
-            <button onclick="filterSelection('gamedev')" class="filter-btn active uppercase"
-                id="btn-gamedev">Games</button>
-            <button onclick="filterSelection('art')" class="filter-btn uppercase" id="btn-art">3D Art</button>
-            <button onclick="filterSelection('all')" class="filter-btn uppercase" id="btn-all">All Work</button>
-        </nav>
-
+        <div class="flex flex-wrap gap-8 mb-12">
+            <button class="filter-btn active" id="btn-all" onclick="filterSelection('all')">
+                <span class="lang-en">All</span>
+                <span class="lang-es">Todo</span>
+            </button>
+            <button class="filter-btn" id="btn-gamedev" onclick="filterSelection('gamedev')">
+                <span class="lang-en">Games</span>
+                <span class="lang-es">Juegos</span>
+            </button>
+            <button class="filter-btn" id="btn-3dart" onclick="filterSelection('3dart')">
+                <span class="lang-en">3D Art</span>
+                <span class="lang-es">Arte 3D</span>
+            </button>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-24" id="projects-grid">
 
+            <a href="https://mayvidev.itch.io/romance-protocol" target="_blank"
+                class="project-card gamedev group block no-underline relative">
+                <div class="relative overflow-hidden mb-8">
+                    <img src="assets/img/romance-protocol.png" alt="Romance Protocol Game"
+                        class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                        <div class="flex flex-wrap gap-2 justify-center px-4">
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Unity</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">C#</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">
+                                <span class="lang-en">Lead Dev</span><span class="lang-es">Desarrollador Líder</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Romance Protocol
+                </h3>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p class="mb-2"><strong class="text-gray-300">Roles:</strong> Team Lead, Programmer, Tech
+                            Artist, Level Designer.</p>
+                        <p>Developed in 36 hours for a "Wrong Genre" GameJam. A subverted shooter where you play as the
+                            only human in a monster school. Chase down fleeing AI and fire heart projectiles to make
+                            them fall in love with you.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p class="mb-2"><strong class="text-gray-300">Roles:</strong> Líder de Equipo, Programador,
+                            Artista Técnico, Diseñador de Niveles.</p>
+                        <p>Desarrollado en 36 horas para una GameJam de "Género Incorrecto". Un shooter subvertido donde
+                            juegas como el único humano en una escuela de monstruos. Persigue a la IA que huye y dispara
+                            proyectiles de corazón para que se enamoren de ti.</p>
+                    </div>
+                </div>
+
+                <span
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">
+                    <span class="lang-en">Play Project →</span>
+                    <span class="lang-es">Jugar Proyecto →</span>
+                </span>
+            </a>
             <a href="https://vortdiffx.itch.io/rumboalacama" target="_blank"
                 class="project-card gamedev group block no-underline relative">
                 <div class="relative overflow-hidden mb-8">
-                    <img src="assets/img/rumbocama.png" alt="Rumbo a la cama Game"
+                    <img src="assets/img/rumbo-cama.png" alt="Rumbo a la cama Game"
                         class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
                     <div
                         class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
@@ -71,19 +142,36 @@
                     </div>
                 </div>
                 <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Rumbo a la Cama</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-                    Built under the "Limited Capacity" theme by a four-person team. Solve physics puzzles using a magic
-                    flashlight equipped with three mass-manipulating gems. Every action drains your power, dimming the
-                    light toward absolute darkness as you strategically navigate the room to reach your bed safely.
-                </p>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p class="mb-2"><strong class="text-gray-300">Roles:</strong> Team Lead, Mechanics Programmer,
+                            Level Designer.</p>
+                        <p>Built under the "Limited Capacity" theme by a four-person team. Solve physics puzzles using a
+                            magic flashlight equipped with three mass-manipulating gems. Every action drains your power,
+                            dimming the light toward absolute darkness as you strategically navigate the room to reach
+                            your bed safely.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p class="mb-2"><strong class="text-gray-300">Roles:</strong> Líder de Equipo, Programador de
+                            Mecánicas, Diseñador de Niveles.</p>
+                        <p>Creado bajo el tema "Capacidad Limitada" por un equipo de cuatro personas. Resuelve acertijos
+                            de físicas usando una linterna mágica equipada con tres gemas para manipular masa. Cada
+                            acción drena tu energía, atenuando la luz hacia la oscuridad absoluta mientras navegas
+                            estratégicamente por la habitación para llegar a tu cama a salvo.</p>
+                    </div>
+                </div>
+
                 <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">Play
-                    Project →</span>
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">
+                    <span class="lang-en">Play Project →</span>
+                    <span class="lang-es">Jugar Proyecto →</span>
+                </span>
             </a>
             <a href="https://sajun0019.itch.io/fruit-frenzy" target="_blank"
                 class="project-card gamedev group block no-underline relative">
                 <div class="relative overflow-hidden mb-8">
-                    <img src="assets/img/fruit.png" alt="Tactical Slicer"
+                    <img src="assets/img/fruit.png" alt="Neon Slicer Game"
                         class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
                     <div
                         class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
@@ -94,31 +182,34 @@
                                 class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">C#</span>
                             <span
                                 class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Combo
-                                System
-                            </span>
+                                System</span>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Fruit Frenzy
-                </h3>
-                <div class="text-gray-500 text-xs mb-6 leading-relaxed space-y-2">
-                    <p><strong class="text-gray-300">Dynamic Difficulty:</strong> Easy, Medium, or Hard modes to test
-                        your reflexes.</p>
-                    <p><strong class="text-gray-300">The Heat System:</strong> Arena reacts to skill, shifting from cool
-                        gray to searing neon red.</p>
-                    <p><strong class="text-gray-300">Fire Mode:</strong> 10x Combos ignite your blade and enter the
-                        "Super State."</p>
-                    <p><strong class="text-gray-300">High Score Tracking:</strong> Personal records are saved
-                        automatically.</p>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Fruit Frenzy</h3>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p>Test your reflexes with dynamic difficulty and tactical slicing. Build combos to trigger the
+                            arena's Heat System, ignite Fire Mode, and automatically track your high scores.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p>Pon a prueba tus reflejos con dificultad dinámica y cortes tácticos. Crea combos para activar
+                            el Sistema de Calor de la arena, enciende el modo "Frenzy" y registra automáticamente tus
+                            puntuaciones más altas.</p>
+                    </div>
                 </div>
+
                 <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">Play
-                    Project →</span>
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">
+                    <span class="lang-en">Play Project →</span>
+                    <span class="lang-es">Jugar Proyecto →</span>
+                </span>
             </a>
-            <a href="https://sajun0019.itch.io/generation-sumo" target="_blank"
+            <a href="https://sajun0019.itch.io/generation-sumo  " target="_blank"
                 class="project-card gamedev group block no-underline relative">
                 <div class="relative overflow-hidden mb-8">
-                    <img src="assets/img/sumo.png" alt="Sumo Game"
+                    <img src="assets/img/sumo.png" alt="Generation Sumo Game"
                         class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
                     <div
                         class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
@@ -132,96 +223,265 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Generation Sumo
-                </h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Unity prototype from Generation Colombia. Features
-                    custom enemies and power-ups.</p>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Generation Sumo</h3>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p>A frantic, physics-based arena game where positioning and momentum are everything. Master the
+                            controls to outmaneuver your opponents and push them out of the ring to claim victory.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p>Un juego de arena frenético basado en físicas donde el posicionamiento y el impulso lo son
+                            todo. Domina los controles para superar a tus oponentes y empújalos fuera del ring para
+                            reclamar la victoria.</p>
+                    </div>
+                </div>
+
                 <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">Play
-                    Project →</span>
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">
+                    <span class="lang-en">Play Project →</span>
+                    <span class="lang-es">Jugar Proyecto →</span>
+                </span>
             </a>
 
-            <a href="https://junsarae.artstation.com/projects/rlNBYJ" target="_blank"
-                class="project-card art group block no-underline relative">
+            <a href="#" target="_blank" class="project-card 3dart group block no-underline relative">
                 <div class="relative overflow-hidden mb-8">
-                    <img src="assets/img/scarab.png" alt="3D Art"
+                    <img src="assets/img/scarab.png" alt="Khepri's Fountain Diorama"
                         class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
                     <div
                         class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
                         <div class="flex flex-wrap gap-2 justify-center px-4">
                             <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Blender</span>
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">UE5</span>
                             <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">ZBrush</span>
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Blender</span>
                             <span
                                 class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Substance
                                 Painter</span>
-                            <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Unreal
-                                Engine 5
-                            </span>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Stylized Diorama
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Khepri's Fountain
                 </h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Hand-painted assets focusing on stylized
-                    silhouettes. Full breakdown on ArtStation.</p>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p>A stylized 3D environment diorama optimized for Unreal Engine 5. Fully modeled, textured, and
+                            assembled to showcase environmental storytelling, lighting techniques, and real-time
+                            rendering performance.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p>Un diorama de entorno 3D estilizado y optimizado para Unreal Engine 5. Completamente
+                            modelado, texturizado y ensamblado para mostrar narrativa ambiental, técnicas de iluminación
+                            y rendimiento de renderizado en tiempo real.</p>
+                    </div>
+                </div>
+
                 <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">View
-                    on ArtStation →</span>
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">
+                    <span class="lang-en">View Project →</span>
+                    <span class="lang-es">Ver Proyecto →</span>
+                </span>
             </a>
 
-            <a href="https://junsarae.artstation.com/" target="_blank"
-                class="project-card art group block no-underline relative">
+            <a href="#" class="project-card 3dart group block no-underline relative cursor-default">
                 <div class="relative overflow-hidden mb-8">
-                    <img src="assets/img/prop1.png" alt="3D Art"
+                    <img src="assets/img/loki-diorama.png" alt="Loki Cultist Diorama WIP"
                         class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
                     <div
                         class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
                         <div class="flex flex-wrap gap-2 justify-center px-4">
                             <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Blender</span>
+                                class="text-[10px] font-black uppercase tracking-widest text-amber-400 border border-amber-400/50 px-3 py-1 rounded-sm">WIP</span>
                             <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">ZBrush</span>
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">UE5</span>
                             <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Substance
-                                Painter</span>
-                            <span
-                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Unreal
-                                Engine 5
-                            </span>
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Optimization</span>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Viking Diorama
-                </h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Work in progress...</p>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Loki's Shrine</h3>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p class="mb-2"><strong class="text-gray-300">Status:</strong> Work in Progress.</p>
+                        <p>A stylized Viking environment focusing on an intimate room for a Loki cultist, featuring a
+                            hand-carved wooden Fenrir sculpture. This scene is being built from the ground up to
+                            practice advanced asset optimization and real-time performance techniques in Unreal Engine
+                            5.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p class="mb-2"><strong class="text-gray-300">Estado:</strong> Trabajo en progreso (WIP).</p>
+                        <p>Un entorno vikingo estilizado centrado en la habitación de un cultista de Loki, que presenta
+                            una escultura de madera de Fenrir tallada a mano. Esta escena se está construyendo desde
+                            cero para practicar técnicas avanzadas de optimización de assets y rendimiento en tiempo
+                            real en Unreal Engine 5.</p>
+                    </div>
+                </div>
+
                 <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">View
-                    on ArtStation →</span>
+                    class="text-[10px] font-bold uppercase tracking-widest text-gray-500 border-b border-gray-500 pb-1 transition">
+                    <span class="lang-en">Coming Soon →</span>
+                    <span class="lang-es">Próximamente →</span>
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/junsarae/" target="_blank"
+                class="project-card 3dart group block no-underline relative">
+                <div class="relative overflow-hidden mb-8">
+                    <img src="assets/img/challenge52.png" alt="Challenge52 Weekly Progress"
+                        class="project-image w-full h-[320px] object-cover border border-zinc-900 transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                        <div class="flex flex-wrap gap-2 justify-center px-4">
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">2D
+                                Fundamentals</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Concept
+                                Art</span>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-widest text-white border border-white/30 px-3 py-1 rounded-sm">Weekly</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-black mb-2 uppercase group-hover:text-gray-400 transition">Challenge52</h3>
+
+                <div class="text-gray-500 text-sm mb-6 leading-relaxed">
+                    <div class="lang-en">
+                        <p>A weekly drawing challenge by Athoro focused on mastering 2D fundamentals. The goal is to
+                            strengthen my concept art pipeline and elevate my hand-painted texturing skills for 3D
+                            models.</p>
+                    </div>
+                    <div class="lang-es">
+                        <p>Un desafío de dibujo semanal de Athoro enfocado en dominar los fundamentos del 2D. El
+                            objetivo es fortalecer mi flujo de trabajo de arte conceptual y elevar mis habilidades de
+                            texturizado pintado a mano para modelos 3D.</p>
+                    </div>
+                </div>
+
+                <span
+                    class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white pb-1 group-hover:text-gray-500 group-hover:border-gray-500 transition">
+                    <span class="lang-en">View Gallery →</span>
+                    <span class="lang-es">Ver Galería →</span>
+                </span>
             </a>
 
         </div>
     </main>
 
+    <section class="bg-white/5 border-y border-white/10 w-full pt-32 pb-32 mt-20 backdrop-blur-sm" id="resume">
+        <div class="max-w-5xl mx-auto px-10">
+            <h2 class="text-4xl font-black uppercase mb-12 border-b border-zinc-800 pb-4 text-white">
+                <span class="lang-en">Experience & Education</span>
+                <span class="lang-es">Experiencia y Educación</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-xl font-bold uppercase text-gray-400 mb-8 tracking-widest">
+                        <span class="lang-en">Work Experience</span>
+                        <span class="lang-es">Experiencia Laboral</span>
+                    </h3>
+
+                    <div class="mb-8 border-l border-zinc-800 pl-4">
+                        <h4 class="text-white font-bold text-lg">
+                            <span class="lang-en">E-learning Course Developer</span>
+                            <span class="lang-es">Desarrollador E-learning</span>
+                            <span class="text-gray-500 text-sm font-normal block mt-1">Menugrafía | 08/2020 -
+                                03/2023</span>
+                        </h4>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            <span class="lang-en">Led the design and prototyping of a gamification strategy for
+                                Findeter's induction process. Implemented interactive game mechanics to increase new
+                                employee engagement and streamline training.</span>
+                            <span class="lang-es">Lideré el diseño y prototipado de una estrategia de gamificación para
+                                optimizar el proceso de inducción de Findeter. Implementé mecánicas de juego para elevar
+                                el engagement de los nuevos colaboradores.</span>
+                        </p>
+                    </div>
+
+                    <div class="mb-8 border-l border-zinc-800 pl-4">
+                        <h4 class="text-white font-bold text-lg">
+                            <span class="lang-en">Multimedia Engineer</span>
+                            <span class="lang-es">Ingeniero en Multimedia</span>
+                            <span class="text-gray-500 text-sm font-normal block mt-1">GP Strategies | 01/2019 -
+                                07/2020</span>
+                        </h4>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            <span class="lang-en">Developed 5+ interactive projects for Universidad Ecopetrol. Merged
+                                programming and visual design to deliver scalable training solutions across
+                                cross-functional corporate areas.</span>
+                            <span class="lang-es">Desarrollé más de 5 proyectos interactivos para Ecopetrol. Entregué
+                                soluciones escalables a través de la sinergia entre programación y diseño visual para
+                                diversas áreas corporativas.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold uppercase text-gray-400 mb-8 tracking-widest">
+                        <span class="lang-en">Education</span>
+                        <span class="lang-es">Educación</span>
+                    </h3>
+
+                    <div class="mb-8 border-l border-zinc-800 pl-4">
+                        <h4 class="text-white font-bold text-lg">Junior Unity Developer
+                            <span class="text-gray-500 text-sm font-normal block mt-1">Generation Colombia | 01/2026 -
+                                05/2026</span>
+                        </h4>
+                    </div>
+
+                    <div class="mb-8 border-l border-zinc-800 pl-4">
+                        <h4 class="text-white font-bold text-lg">3D Environment Art Design
+                            <span class="text-gray-500 text-sm font-normal block mt-1">Into Games, UK | 05/2024 -
+                                07/2024</span>
+                        </h4>
+                    </div>
+
+                    <div class="mb-8 border-l border-zinc-800 pl-4">
+                        <h4 class="text-white font-bold text-lg">
+                            <span class="lang-en">Multimedia Engineer</span>
+                            <span class="lang-es">Ingeniero en Multimedia</span>
+                            <span class="text-gray-500 text-sm font-normal block mt-1">Universidad Militar Nueva Granada
+                                | 2012 - 2018</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="bg-variation-bottom w-full pt-32 pb-40" id="contact">
         <div class="max-w-5xl mx-auto px-10">
-            <h2 class="section-label">Connect</h2>
+            <h2 class="section-label">
+                <span class="lang-en">Connect</span>
+                <span class="lang-es">Contacto</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
                 <div>
-                    <h3 class="contact-heading">Let's build<br>something.</h3>
-                    <p class="text-gray-500 mb-10 max-w-sm leading-relaxed"> I'm currently open to new opportunities
-                        in Game Development or 3D Art. Whether you have a question or just want to connect, my inbox is
-                        always open.</p>
+                    <h3 class="contact-heading">
+                        <span class="lang-en">Let's build<br>something.</span>
+                        <span class="lang-es">Construyamos<br>algo juntos.</span>
+                    </h3>
+                    <p class="text-gray-500 mb-10 max-w-sm leading-relaxed">
+                        <span class="lang-en">I'm currently open to new opportunities in Game Development or 3D Art.
+                            Whether you have a question or just want to connect, my inbox is always open.</span>
+                        <span class="lang-es">Actualmente estoy disponible para nuevas oportunidades en Desarrollo de
+                            Videojuegos o Arte 3D. Si tienes alguna pregunta o solo quieres conectar, mi bandeja de
+                            entrada siempre está abierta.</span>
+                    </p>
                     <a href="mailto:juan.aragon.ps@gmail.com" class="email-link">juan.aragon.ps@gmail.com</a>
                 </div>
                 <form action="https://formspree.io/f/mnjbrown" method="POST" class="flex flex-col gap-6">
-                    <input type="text" name="name" placeholder="NAME" class="form-input" required>
-                    <input type="email" name="email" placeholder="EMAIL" class="form-input" required>
-                    <textarea name="message" placeholder="MESSAGE" rows="4" class="form-input resize-none"
+                    <input type="text" name="name" placeholder="NAME / NOMBRE" class="form-input" required>
+                    <input type="email" name="email" placeholder="EMAIL / CORREO" class="form-input" required>
+                    <textarea name="message" placeholder="MESSAGE / MENSAJE" rows="4" class="form-input resize-none"
                         required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">
+                        <span class="lang-en">Send Message</span>
+                        <span class="lang-es">Enviar Mensaje</span>
+                    </button>
                 </form>
             </div>
         </div>
