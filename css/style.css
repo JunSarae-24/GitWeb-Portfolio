@@ -100,17 +100,17 @@ body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; ma
     opacity: 1;
 }
 /* --- Global Game Dev Cursor --- */
-body {
-    /* Creates a sleek white dot. The '10 10' centers the clicking point */
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="4" fill="%23ffffff" /></svg>') 10 10, auto;
-}
-
-/* ---- CUSTOM CURSOR, MAYBE A 16x16 or 32x32 PIXEL SWORD --- */
 /*body {
-    cursor: url('assets/img/my-custom-cursor.png'), auto;
+    
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="4" fill="%23ffffff" /></svg>') 10 10, auto;
 }*/
 
-/* Ensure buttons and links still show the clicking hand */
+/* ---- CUSTOM CURSOR, MAYBE A 16x16 or 32x32 PIXEL SWORD --- */
+body {
+    /* El ../ le dice al CSS: "Sal de la carpeta css, y entra en assets/img" */
+    cursor: url('../assets/img/sword_cursor.png'), auto;
+}
+
 a, button, input, textarea {
     cursor: pointer;
 }
